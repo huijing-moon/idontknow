@@ -1,9 +1,9 @@
-package basic.Dto;
+package basic.VO;
 
 import lombok.Data;
 
 @Data
-public class BasicDto {
+public class BasicVO {
     private Integer id;
     private String title;
     private String name;

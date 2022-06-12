@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.todo">
+<!--    <insert id="addTodoList" parameterType="List" >-->
+<!--        INSERT INTO todo (CONTENTS, USER_ID)-->
+<!--        VALUES( #{contents}, #{userId})-->
+
+<!--    </insert>-->
+
+<!--    <select id="getAllList" resultType="basic.todo.VO.todoVO">-->
+<!--        SELECT * FROM todo-->
+<!--        WHERE USER_ID =#{userId}-->
+<!--    </select>-->
+</mapper>

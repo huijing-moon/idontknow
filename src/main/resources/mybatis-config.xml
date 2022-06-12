@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- My batis 설정 파일 -->
+<!--    <typeAliases>-->
+<!--        <typeAlias type="basic.todo.VO.todoVO" alias="todoVO"/>-->
+<!--    </typeAliases>-->
+
+    <typeAliases>
+        <typeAlias type="basic.Article.vo.ArticleVo" alias="ArticleVo"></typeAlias>
+    </typeAliases>
+<!--    <mappers>-->
+<!--        <mapper resource="mapper.todo.xml" />-->
+<!--        <mapper resource="mapper.article.xml" />-->
+<!--    </mappers>-->
+</configuration>

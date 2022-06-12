@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="articleVo">
+
+
+    <insert id="create">
+        INSERT INTO article(
+          article_no
+            , title
+            , content
+            , writer
+            , regdate
+            , viewcnt
+        ) VALUES (
+                 #{articleNo}
+                 , #{title}
+                 , #{content}
+                 , #{writer}
+                 , #{regdate}
+                 , #{viewcnt}
+             )
+    </insert>
+
+    <select id = "read">
+        SELECT
+            article_no
+            , title
+            , content
+            , writer
+            , regdate
+            , viewcnt
+        FROM article
+        WHERE aticle_no = #{articleNo}
+    </select>
+
+    <update id="update">
+        UPDATE article
+        SET
+            title =#{title}
+             ,content= #{content}
+        WHERE
+              article_no = #{articleNo}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM article
+        WHERE
+            article_no =#{articleNo}
+    </delete>
+
+    <select id = "listAll" resultType="ArticleVo">
+<![CDATA[
+            SELECT
+               article_no
+                     , title
+                    , content
+                    , writer
+                    , regdate
+                    , viewcnt
+        FROM article
+        WHERE  article_no > 0
+        ORDER BY  article_no DESC, regdate DESC
+]]>
+    </select>
+
+
+    <resultMap id="ArticleResultMap" type="ArticleVo">
+        <id property="articleNo" column="article_no"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="writer" column="writer" />
+        <result property="regdate" column="regdate"/>
+        <result property="viewcnt" column="viewcnt" />
+    </resultMap>
+
+</mapper>
